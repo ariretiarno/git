@@ -9,6 +9,7 @@ pipeline {
             stage('Checkout') {
                   steps {
                         script {
+                            sh 'printenv'
                             sh 'echo checkout'
                         }
                   }
