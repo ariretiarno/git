@@ -86,10 +86,7 @@ pipeline {
                   steps {
                         /// This add file from jenkins custom file
                         /// edit on the https://jenkinsx.ariretiarnoa2z.com/job/flutter_ariretiarno/configfiles/
-                        configFileProvider(
-                              [configFile(fileId: 'secrets-production', variable: 'SECRETS_PROD')]) {
-                                    sh 'cat $SECRETS_PROD > .env_production'
-                        }
+                        
                         /// This script will run flutter build apk with flavor
                         /// Then move the generated apk, in order to rename to a new file
                         script {
