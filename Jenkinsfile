@@ -9,13 +9,7 @@ pipeline {
             stage('Checkout') {
                   steps {
                         script {
-                              env.COMMIT_MESSAGE = commitMessage()
-                              env.COMMIT_NUMBER = commitSha1()
-                              env.VERSION_NAME = "v${getVersionName()}"
-                              env.ANDROID_HOME = '/opt/android-sdk'
-                        }
-                        script {
-                              recordCommitMsg(env.VERSION_NAME, env.COMMIT_MESSAGE)
+                            sh 'echo checkout'
                         }
                   }
             }
