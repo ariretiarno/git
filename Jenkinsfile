@@ -100,5 +100,26 @@ pipeline {
                         /// We can do a fastlane task here
                   }
             }
+            stage('Build-Production-Tag') {
+                  when { 
+                        tag "0.*"
+                  }
+                  steps {
+                        /// This add file from jenkins custom file
+                        /// edit on the https://jenkinsx.ariretiarnoa2z.com/job/flutter_ariretiarno/configfiles/
+                        
+                        /// This script will run flutter build apk with flavor
+                        /// Then move the generated apk, in order to rename to a new file
+                        script {
+                               sh 'echo build prod'
+                        }
+                        /// This script will clean & run flutter build apk with flavor
+                        /// Then move the generated apk, in order to rename to a new file
+                        
+                        
+                        /// Do something
+                        /// We can do a fastlane task here
+                  }
+            }
       }
 }
