@@ -101,9 +101,9 @@ pipeline {
                         /// We can do a fastlane task here
                   }
             }
-            stage('Build-Production-Tag') {
+            /*stage('Build-Production-Tag') {
                   when { 
-                        tag "release-*"
+                        tag "1.1.*"
                   }
                   steps {
                         /// This add file from jenkins custom file
@@ -112,7 +112,7 @@ pipeline {
                         /// This script will run flutter build apk with flavor
                         /// Then move the generated apk, in order to rename to a new file
                         script {
-                               sh 'echo build prod'
+                               sh 'echo build prod with tag'
                         }
                         /// This script will clean & run flutter build apk with flavor
                         /// Then move the generated apk, in order to rename to a new file
@@ -121,6 +121,6 @@ pipeline {
                         /// Do something
                         /// We can do a fastlane task here
                   }
-            }
+            }*/
       }
 }
