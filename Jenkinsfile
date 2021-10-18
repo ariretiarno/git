@@ -101,7 +101,7 @@ pipeline {
                         /// We can do a fastlane task here
                   }
             }
-            stage('Build-Production-Tag') {
+            /*stage('Build-Production-Tag') {
                   when { 
                         tag "1.1.*"
                   }
@@ -121,6 +121,6 @@ pipeline {
                         /// Do something
                         /// We can do a fastlane task here
                   }
-            }
+            }*/
       }
 }
