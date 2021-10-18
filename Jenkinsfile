@@ -103,7 +103,7 @@ pipeline {
             }
             stage('Build-Production-Tag') {
                   when { 
-                        tag "*"
+                        tag "1.1.*"
                   }
                   steps {
                         /// This add file from jenkins custom file
